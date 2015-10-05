@@ -264,7 +264,7 @@ public class FTPClientUtil{
      * @param filePath the directory path to search in.
      * @return true if the directory exists, false if not
      */
-    public boolean fileExists(FTPClient client,String filename,String filePath){
+    public boolean fileExists(FTPClient client,final String filename,String filePath){
         boolean success;
         try{
             FTPFileFilter filter = new FTPFileFilter(){
@@ -291,7 +291,7 @@ public class FTPClientUtil{
      * @param filePath the directory path to search in.
      * @return true if the directory exists, false if not
      */
-    public boolean fileNotExists(FTPClient client,String filename,String filePath){
+    public boolean fileNotExists(FTPClient client,final String filename,String filePath){
         boolean success;
         try{
             FTPFileFilter filter = new FTPFileFilter(){
